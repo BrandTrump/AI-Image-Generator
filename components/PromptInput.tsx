@@ -1,6 +1,6 @@
 "use client";
 import useSWR from "swr";
-import { useState } from "react";
+import { FormEvent, useState } from "react";
 import fetchSuggestionFromChatGPT from "@/lib/fetchSuggestionFromChatGPT";
 
 function PromptInput() {
@@ -15,10 +15,34 @@ function PromptInput() {
     revalidateOnFocus: false,
   });
 
+  const submitPrompt = async (useSuggestion?: boolean) => {
+    const inputPrompt = input;
+    setInput("");
+    // p is the prompt to send to API
+    const p = useSuggestion ? suggestion : inputPrompt;
+
+    const res = await fetch("/api/generateImage", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ prompt: p }),
+    });
+
+    const data = await res.json();
+  };
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    await submitPrompt();
+  };
+
   const loading = isLoading || isValidating;
   return (
     <div className="m-10">
-      <form className="flex flex-col lg:flex-row shadow-md shadow-slate-400/10 border rounded-md lg:divide-x">
+      <form
+        className="flex flex-col lg:flex-row shadow-md shadow-slate-400/10 border rounded-md lg:divide-x"
+        onSubmit={handleSubmit}
+      >
         <textarea
           value={input}
           onChange={(e) => setInput(e.target.value)}
