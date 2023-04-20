@@ -5,7 +5,7 @@ export async function POST(request: Request) {
   const prompt = res.prompt;
 
   // connect to Microsoft Azure function endpoint
-  const respose = await fetch("/api/generateImage", {
+  const respose = await fetch("http://localhost:7071/api/generateImage", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ prompt }),
