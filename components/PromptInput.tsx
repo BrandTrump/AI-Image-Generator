@@ -87,13 +87,13 @@ function PromptInput() {
           Generate
         </button>
         <button
-          type="button"
+          type="submit"
           className="bg-violet-400 p-4 text-white transition-colors duration-200  disabled:text-gray-300 disabled:cursor-not-allowed disabled:bg-gray-400"
         >
           Use Suggestion
         </button>
         <button
-          type="button"
+          type="submit"
           className="bg-white p-4 text-violet-400 transition-colors duration-200  rounded-b-md md:rounded-r-md md:rounded-bl-none "
           onClick={mutate}
         >
