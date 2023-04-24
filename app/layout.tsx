@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import "./globals.css";
 import PromptInput from "@/components/PromptInput";
+import ClientProvider from "@/components/ClientProvider";
 
 export const metadata = {
   title: "DALL·E 2.0",
@@ -15,9 +16,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Header />
-        <PromptInput />
-        {children}
+        <ClientProvider>
+          <Header />
+          <PromptInput />
+          {children}
+        </ClientProvider>
       </body>
     </html>
   );
