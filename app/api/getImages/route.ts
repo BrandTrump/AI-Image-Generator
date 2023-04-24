@@ -1,6 +1,8 @@
 export async function GET(request: Request) {
+  const url: string = process.env.URL_GET_IMAGES!;
+
   // connect to Microsoft Azure function endpoint
-  const respose = await fetch("http://localhost:7071/api/getImages", {
+  const respose = await fetch(url, {
     cache: "no-store",
   });
 
