@@ -11,4 +11,5 @@ Tutorial by [Sonny Sangha](https://www.youtube.com/@SonnySangha) - https://www.y
 - Azure Functions
 - How to upload/download images to & from Microsoft Azure Blob Storage securely
 - ChatGPT API
+- How to deploy using Vercel CLI
 
