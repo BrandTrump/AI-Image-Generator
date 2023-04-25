@@ -2,7 +2,7 @@
 Tutorial by [Sonny Sangha](https://www.youtube.com/@SonnySangha) - https://www.youtube.com/watch?v=0qHnVYSxZ4k&t=11656s
 
 ### Created With
-- Next.js 13
+- Next.js 13.2
 - Microsoft Azure
 - Tailwind CSS
 - TypeScript
