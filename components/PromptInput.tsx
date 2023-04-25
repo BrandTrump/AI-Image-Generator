@@ -80,7 +80,7 @@ function PromptInput() {
           disabled={!input}
           className={`p-4 ${
             input
-              ? "bg-violet-500 text-white transition-colors duration-200"
+              ? "bg-violet-500 text-white transition-colors duration-200 hover:bg-violet-600"
               : "text-gray-300 cursor-not-allowed"
           } `}
         >
@@ -89,13 +89,13 @@ function PromptInput() {
         <button
           type="button"
           onClick={() => submitPrompt(true)}
-          className="bg-violet-400 p-4 text-white transition-colors duration-200  disabled:text-gray-300 disabled:cursor-not-allowed disabled:bg-gray-400"
+          className="bg-violet-400 p-4 text-white transition-colors duration-200  disabled:text-gray-300 disabled:cursor-not-allowed disabled:bg-gray-400 hover:bg-violet-500"
         >
           Use Suggestion
         </button>
         <button
           type="button"
-          className="bg-white p-4 text-violet-400 transition-colors duration-200  rounded-b-md md:rounded-r-md md:rounded-bl-none "
+          className="bg-white p-4 text-violet-400 transition-colors duration-200  rounded-b-md md:rounded-r-md md:rounded-bl-none hover:bg-gray-100"
           onClick={mutate}
         >
           New Suggestion
