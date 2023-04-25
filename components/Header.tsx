@@ -22,7 +22,12 @@ function Header() {
         </div>
       </div>
       <div className="flex items-center text-xs md:text-base text-gray-500">
-        <Link href="#">GitHub Repo</Link>
+        <Link
+          href="https://github.com/BrandTrump/AI-Image-Generator"
+          target="_blank"
+        >
+          GitHub Repo
+        </Link>
       </div>
     </header>
   );
